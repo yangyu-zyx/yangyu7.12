@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string
+    </title>
+</head>
+
+<body>
+    <script>
+        console.log('abc'.padStart(10));
+        console.log('abc'.padStart(10, "123"));
+        console.log('abc'.padStart(6, "123465"));
+        console.log('abc'.padStart(8, "0"));
+        console.log('abc'.padStart(1));
+        console.log('abc'.padEnd(10));     
+        console.log('abc'.padEnd(10, "123"));
+        console.log('abc'.padEnd(6, "123465"));
+        console.log('abc'.padEnd(8, "0"));
+        console.log('abc'.padEnd(1));
+        var time = new Date();
+        var h = String(time.getHours()).padStart(2, '0')
+        var m = String(time.getMinutes()).padStart(2, '0')
+        var s = String(time.getSeconds()).padStart(2, '0')
+        console.log(`${h}:${m}:${s}`)
+
+    </script>
+</body>
+
+</html>
