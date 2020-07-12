@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        console.log(arr1.concat(arr2, [7, 8, 9]));
+
+        var arr = [1, 5, 6, 99, 52, 663, 22, 66, 552, 123, 6, 622];
+        console.log(arr.indexOf(22));
+
+        var arr3 = [1, 5, 6, 99, 52, 663, 22, 66, 552, 6, 622];
+        arr3.sort(function (a, b) {
+ 
+            return a - b;
+        })
+        console.log(arr3);
+        console.log(arr.sort((a, b) => a - b))  
+        console.log(arr.sort((a, b) => b - a))
+
+
+        var arr3 = [1, 5, 6, 99, 52, 663, 22, 66, 552, 6, 622];
+        arr3.forEach(function (value, index) {
+            console.log(index, value)
+        })
+        arr3.forEach((value, index) => { console.log(index, value) })
+
+
+        var arr = [1, 5, 6, 99, 52, 663, 22, 66, 552, 123, 6, 622];
+        var newArr = arr.filter(function (value, index) {
+            return value > 100;       
+        })
+        console.log(newArr);
+
+
+        var person = [
+            { name: "张三", age: 20, sex: "男" },
+            { name: "李四", age: 19, sex: "女" },
+            { name: "王五", age: 22, sex: "男" },
+            { name: "赵六", age: 21, sex: "女" }
+        ];
+        var x = person.filter(function (value, index) {
+            return value.age > 20;          
+            // return vlue.sex=="男";    
+        })
+        console.log(x);
+        arr.filter((value, index) => { return value.age > 20 })
+
+
+        var arr = [1, 5, 6, 99, 52, 663, 22, 66, 552, 123, 6, 622];
+
+
+        var end = arr.map((value, index) => value * 2);
+        console.log(end);
+
+        var arr3 = [1, 5, 6, 99, 52, 663, 22, 66, 552, 123, 6, 622];
+        var end = arr3.some(function (value, index) {
+            return value < 500;
+        });
+        console.log(end);
+
+        var arr3 = [1, 5, 6, 99, 52, 663, 22, 66, 552, 123, 6, 622];
+        var end = arr3.every(function (value, index) {
+            return value < 500;
+        });
+        console.log(end);
+
+        var arr = [1, 5, 8, 6, 9, 4, 2, 3];
+        console.log(arr.reverse());    
+        console.log(arr);
+
+
+        var a = { length: 2, 0: 'aaa', 1: 'bbb' };
+        console.log(Array.from(a));    
+        var b = { length: 2 };
+        console.log(Array.from(b));
+
+
+        console.log(Array.of() )
+        console.log(Array.of(undefined) ) 
+        console.log(Array.of(1))
+        console.log( Array.of(1, 2))       
+        
+       
+
+
+        var arr = [1, 2, { name: "张三" }]
+        console.log(arr.includes(2))   
+        console.log(arr.includes(4))     
+        console.log(arr.includes({ name: "张三" }))
+
+
+        console.log(['a', 'b', 'c', 'd'].includes('b'))         
+        console.log(['a', 'b', 'c', 'd'].includes('b', 1))     
+        console.log(['a', 'b', 'c', 'd'].includes('b', 2))
+    
+
+
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        arr.sort(() => Math.random() - 0.5)
+        console.log(arr);
+    </script>
+</body>
+
+</html>

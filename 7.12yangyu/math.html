@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+</head>
+
+<body>
+    <script>
+        function pingfanggen(x, y) {
+            var r = Math.pow(x, 1 / y)
+            return r;
+        }
+
+        console.log(pingfanggen(1, 1))
+
+        var arr = [23, 4, 651, 461, 1231, 411];
+        var maxArr = Math.max(...arr);   
+        var minArr = Math.min(...arr);
+        console.log(maxArr, minArr)
+        function ran(x, y) {
+            var a = Math.floor(Math.random() * (y - x) + x);      
+            var b = Math.floor(Math.random() * (y - x + 1) + x);
+            return a, b;
+        }
+        console.log(ran(3, 6))
+
+
+
+
+    </script>
+</body>
+
+</html>
